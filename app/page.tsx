@@ -6,10 +6,10 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
-      <b>Didi Groq</b>
+      <b className='px-3'>Didi Groq</b>
       {messages.map(m => (
-        <div key={m.id} className="whitespace-pre-wrap">
-          {m.role === 'user' ? 'User: ' : 'AI: '}
+        <div key={m.id} className="whitespace-pre-wrap px-3">
+          {m.role === 'user' ? <b className='mt-2'>User:</b>: <b className='mt-2'>Didi:</b>}
           {m.content}
         </div>
       ))}
